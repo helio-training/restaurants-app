@@ -2,10 +2,12 @@
 
 > Build a restaurants application using AngularJS and the infamous Restaurants API.
 
+
 ## Table of Conents
 
 * [Restaurants API](#restaurants-api)
 * [Getting Started](#getting-started)
+* [Demo](http://helio-restaurants.netlify.com/)
 
   
 ## Restaurants API
