@@ -1,0 +1,11 @@
+<div *ngIf="restaurant">
+
+  <h1>Are you sure?</h1>
+
+  <h3>Delete {{ restaurant.name }}?</h3>
+
+
+  <button (click)="onDelete(restaurant)">Delete</button>
+
+  <a href="/restaurants">Cancel</a>
+</div>

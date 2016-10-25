@@ -1,0 +1,9 @@
+<h1>Restaurants</h1>
+
+<div *ngFor="let restaurant of restaurants">
+  <a [routerLink]="['/restaurants', restaurant._id]">{{ restaurant.name }}</a>
+</div>
+
+
+<button [hidden]="index === 0" (click)="onPrevPage()"> << </button>
+<button (click)="onNextPage()"> >> </button>

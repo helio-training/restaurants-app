@@ -1,0 +1,37 @@
+<form (submit)="onSubmit()" #restuarantForm="ngForm">
+  <h3>Restaurant Information</h3>
+
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" [(ngModel)]="restaurant.name" required />
+  </div>
+
+  <div>
+    <label for="cuisine">Cuisine</label>
+    <input type="text" id="cuisine" name="cuisine" [(ngModel)]="restaurant.cuisine" required />
+  </div>
+
+  <h3>Address</h3>
+  <div>
+    <label for="building">Building</label>
+    <input type="text" id="building" name="building" [(ngModel)]="restaurant.address.building" required />
+  </div>
+
+  <div>
+    <label for="street">Street</label>
+    <input type="text" id="street" name="street" [(ngModel)]="restaurant.address.street" required />
+  </div>
+
+  <div>
+    <label for="borough">Borough</label>
+    <input type="text" id="borough" name="borough" [(ngModel)]="restaurant.borough" required />
+  </div>
+
+  <div>
+    <label for="zipcode">Zipcode</label>
+    <input type="text" id="zipcode" name="zipcode" [(ngModel)]="restaurant.address.zipcode" required />
+  </div>
+
+  <button type="submit" [disabled]="!restuarantForm.form.valid">Save</button>
+
+</form>

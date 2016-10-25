@@ -1,0 +1,25 @@
+<div *ngIf="restaurant">
+  <h1>{{ restaurant.name }}</h1>
+
+  <div>{{ restaurant.cuisine }}</div>
+
+  <address>
+    {{ restaurant.address.building }} {{ restaurant.address.street }} <br>
+    {{ restaurant.borough }}, {{ restaurant.address.zipcode}}
+  </address>
+
+
+  <h3>Grades</h3>
+  <div *ngFor="let grade of restaurant.grades">
+    {{ grade.date | date }}
+    {{ grade.grade }}
+    {{ grade.score }}
+  </div>
+
+
+  <a [routerLink]="['/restaurants', restaurant._id, 'edit']">Edit</a>
+  <a [routerLink]="['/restaurants', restaurant._id, 'delete']">Delete</a>
+
+</div>
+
+
